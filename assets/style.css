@@ -209,13 +209,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .nav-logo .logo-icon {
   width: 52px; height: 52px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   border-radius: var(--radius-md);
   display: grid; place-items: center;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--navy-dark);
-  box-shadow: var(--shadow-gold);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.nav-logo .logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .nav-logo .logo-text { line-height: 1.2; }
 .nav-logo .logo-text .name {
