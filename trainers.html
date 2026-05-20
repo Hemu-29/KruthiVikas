@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Trainers | Kruthi Vikas Careers</title>
+  <meta name="description" content="Meet the expert trainers at Kruthi Vikas Careers — industry professionals with real experience in IT, data, communications, and placement training." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .trainer-full-card {
+      background:var(--white);
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      box-shadow:var(--shadow-sm);
+      border:1px solid var(--gray-200);
+      transition:var(--transition);
+      display:grid;
+      grid-template-columns:280px 1fr;
+    }
+    .trainer-full-card:hover { box-shadow:var(--shadow-lg);border-color:var(--gray-200); }
+    .tfc-img { background:linear-gradient(135deg,var(--navy-dark),var(--navy));position:relative;min-height:300px; }
+    .tfc-img img { width:100%;height:100%;object-fit:cover; }
+    .tfc-exp { position:absolute;bottom:16px;left:16px;background:var(--gold);color:var(--navy-dark);font-size:0.78rem;font-weight:800;padding:6px 14px;border-radius:var(--radius-full); }
+    .tfc-body { padding:36px; }
+    .tfc-body h2 { font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:4px; }
+    .tfc-designation { color:var(--gold-dark);font-weight:700;font-size:0.95rem;margin-bottom:4px; }
+    .tfc-company { font-size:0.82rem;color:var(--gray-500);margin-bottom:16px;font-weight:500; }
+    .tfc-bio { font-size:0.9rem;color:var(--gray-700);line-height:1.75;margin-bottom:20px; }
+    .tfc-skills { display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px; }
+    .skill-tag { background:var(--gray-100);color:var(--navy);font-size:0.78rem;font-weight:700;padding:5px 14px;border-radius:var(--radius-full); }
+    .tfc-social { display:flex;gap:10px; }
+    .tfc-social a { width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gray-200);display:grid;place-items:center;color:var(--gray-500);transition:var(--transition-fast); }
+    .tfc-social a:hover { background:var(--navy);color:var(--white);border-color:var(--navy); }
+    .trainers-list { display:flex;flex-direction:column;gap:28px;margin-top:60px; }
+    @media(max-width:768px){.trainer-full-card{grid-template-columns:1fr;}.tfc-img{min-height:260px;}}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar"><div class="container"><div class="topbar-left"><span class="topbar-item"><i class="fa fa-phone"></i> <a href="tel:9441602034">9441602034</a></span><span class="topbar-item"><i class="fa fa-envelope"></i> <a href="mailto:kruthivikascareers@gmail.com">kruthivikascareers@gmail.com</a></span></div><div class="topbar-right"><span style="font-size:0.75rem;color:rgba(245,184,0,0.85);">⭐ Your Success Is Our Mission</span><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline">Your Path to Career Growth</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="trainers.html" class="active">Trainers</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-primary btn-sm">Enroll Now ✦</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+  </div></div>
+</nav>
+<div class="mobile-nav" id="mobileNav"><div class="mobile-nav-header"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:40px;height:40px;font-size:1.1rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span></div></a><button class="mobile-nav-close" id="mobileNavClose">✕</button></div><div class="mobile-nav-links"><a href="index.html">🏠 Home</a><a href="courses.html">📚 Courses</a><a href="services.html">⚡ Services</a><a href="about.html">ℹ️ About Us</a><a href="trainers.html">👨‍🏫 Trainers</a><a href="contact.html">📞 Contact</a></div><div class="mobile-nav-footer"><div class="mobile-nav-cta"><a href="contact.html" class="btn btn-primary" style="justify-content:center;">Enroll Now ✦</a></div></div></div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container"><div class="page-header-inner">
+    <div class="section-tag" style="margin:0 auto 16px;">👨‍🏫 Meet Our Team</div>
+    <h1>Our <span>Expert Trainers</span></h1>
+    <p>Industry professionals who bring real-world knowledge and passion to every classroom.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Trainers</span></div>
+  </div></div>
+</div>
+
+<!-- TRAINER INTRO STATS -->
+<section style="padding:60px 0;background:var(--gold);">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" style="border-color:rgba(13,27,62,0.12);">
+        <div class="stat-num" style="color:var(--navy-dark);">10+</div>
+        <div class="stat-desc" style="color:var(--navy);">Expert Trainers</div>
+      </div>
+      <div class="stat-item" style="border-color:rgba(13,27,62,0.12);">
+        <div class="stat-num" style="color:var(--navy-dark);">7+</div>
+        <div class="stat-desc" style="color:var(--navy);">Avg. Years Experience</div>
+      </div>
+      <div class="stat-item" style="border-color:rgba(13,27,62,0.12);">
+        <div class="stat-num" style="color:var(--navy-dark);">5+</div>
+        <div class="stat-desc" style="color:var(--navy);">Domains Covered</div>
+      </div>
+      <div class="stat-item" style="border-color:rgba(13,27,62,0.12);">
+        <div class="stat-num" style="color:var(--navy-dark);">500+</div>
+        <div class="stat-desc" style="color:var(--navy);">Students Mentored</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINERS LIST -->
+<section style="padding:80px 0;background:var(--off-white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Expert Faculty</div>
+      <h2 class="section-title">Learn from the <span class="highlight">Best in the Industry</span></h2>
+      <p class="section-subtitle">Every trainer at Kruthi Vikas Careers has hands-on industry experience and is passionate about shaping student success.</p>
+    </div>
+
+    <div class="trainers-list">
+
+      <div class="trainer-full-card fade-up">
+        <div class="tfc-img">
+          <img src="assets/career_guidance.png" alt="Ravi Kumar" loading="lazy" />
+          <span class="tfc-exp">8+ Years Exp.</span>
+        </div>
+        <div class="tfc-body">
+          <h2>Ravi Kumar</h2>
+          <div class="tfc-designation">Lead Trainer — DSA & Competitive Programming</div>
+          <div class="tfc-company">🏢 Ex-TCS Senior Software Engineer | IIT Hyderabad Alumni</div>
+          <p class="tfc-bio">Ravi Kumar brings 8+ years of software engineering experience from TCS to the Kruthi Vikas classroom. Specializing in Data Structures, Algorithms, and competitive programming, he has mentored over 200 students who have gone on to crack technical interviews at top product companies. His unique teaching style — combining theory with real problem-solving — makes even the most complex topics accessible.</p>
+          <div class="tfc-skills">
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+            <span class="skill-tag">LeetCode Strategy</span>
+            <span class="skill-tag">System Design</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+          </div>
+          <div class="tfc-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trainer-full-card fade-up">
+        <div class="tfc-img">
+          <img src="assets/internship_work.png" alt="Priya Sharma" loading="lazy" />
+          <span class="tfc-exp">6+ Years Exp.</span>
+        </div>
+        <div class="tfc-body">
+          <h2>Priya Sharma</h2>
+          <div class="tfc-designation">Communication & Soft Skills Trainer</div>
+          <div class="tfc-company">🏢 Ex-Infosys HR Manager | Certified Corporate Trainer</div>
+          <p class="tfc-bio">Priya Sharma is a certified corporate trainer with 6+ years of experience in HR management and communication training at Infosys. She brings a unique blend of HR perspective and communication expertise that helps students ace group discussions, HR interviews, and workplace communication. Her mock interview sessions are particularly highly rated by students.</p>
+          <div class="tfc-skills">
+            <span class="skill-tag">Spoken English</span>
+            <span class="skill-tag">Business Writing</span>
+            <span class="skill-tag">Group Discussion</span>
+            <span class="skill-tag">Interview Coaching</span>
+            <span class="skill-tag">Body Language</span>
+            <span class="skill-tag">HR Training</span>
+          </div>
+          <div class="tfc-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trainer-full-card fade-up">
+        <div class="tfc-img">
+          <img src="assets/placement_success.png" alt="Srinivas Reddy" loading="lazy" />
+          <span class="tfc-exp">10+ Years Exp.</span>
+        </div>
+        <div class="tfc-body">
+          <h2>Srinivas Reddy</h2>
+          <div class="tfc-designation">Aptitude & Quantitative Reasoning Expert</div>
+          <div class="tfc-company">🏛️ IIT Alumni | 10+ Years Placement Training</div>
+          <p class="tfc-bio">With 10+ years of dedicated placement training experience and an IIT background, Srinivas Reddy is among the most sought-after aptitude trainers in the region. His expertise covers all aspects of aptitude testing — quantitative, logical, verbal, and data interpretation. He has an exceptional track record of helping students crack tests at TCS, Infosys, Wipro, and Cognizant.</p>
+          <div class="tfc-skills">
+            <span class="skill-tag">Quantitative Aptitude</span>
+            <span class="skill-tag">Logical Reasoning</span>
+            <span class="skill-tag">Verbal Ability</span>
+            <span class="skill-tag">Data Interpretation</span>
+            <span class="skill-tag">Company-Specific Tests</span>
+          </div>
+          <div class="tfc-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trainer-full-card fade-up">
+        <div class="tfc-img">
+          <img src="assets/training_classroom.png" alt="Kavitha Nair" loading="lazy" />
+          <span class="tfc-exp">7+ Years Exp.</span>
+        </div>
+        <div class="tfc-body">
+          <h2>Kavitha Nair</h2>
+          <div class="tfc-designation">Full Stack Web Development Trainer</div>
+          <div class="tfc-company">🏢 Ex-Wipro Tech Lead | React & Node.js Specialist</div>
+          <p class="tfc-bio">Kavitha Nair is a former Wipro tech lead with 7+ years of full-stack development experience. She specializes in modern JavaScript frameworks — React, Node.js, and Next.js — and has built and deployed several enterprise-level applications. Her real-project based approach ensures students build a strong, practical portfolio that stands out to recruiters.</p>
+          <div class="tfc-skills">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Git & GitHub</span>
+          </div>
+          <div class="tfc-social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JOIN US AS TRAINER -->
+<section style="padding:80px 0;background:var(--white);">
+  <div class="container">
+    <div style="max-width:700px;margin:0 auto;text-align:center;" class="fade-up">
+      <div class="section-tag" style="margin:0 auto 16px;">Join Our Team</div>
+      <h2 class="section-title" style="margin-bottom:16px;">Are You an <span class="highlight">Industry Expert?</span></h2>
+      <p class="section-subtitle" style="margin:0 auto 36px;">We're always looking for passionate industry professionals to join our trainer network and help shape the next generation of professionals.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Apply to be a Trainer <i class="fa fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-navy">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="container"><div class="cta-inner">
+    <h2>Ready to Learn from Industry Experts?</h2>
+    <p>Enroll today and get trained by professionals who've been where you want to go.</p>
+    <div class="cta-buttons"><a href="contact.html" class="btn btn-navy">Enroll Now</a><a href="courses.html" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">View Courses</a></div>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer><div class="container"><div class="footer-main"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:44px;height:44px;font-size:1.2rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline" style="color:var(--gold);">Your Path to Career Growth</span></div></a><p>Empowering students with placement-ready skills through expert training and career guidance.</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="courses.html">→ Courses</a></li><li><a href="contact.html">→ Contact</a></li></ul></div><div class="footer-col"><h4>Courses</h4><ul><li><a href="courses.html">→ DSA & Coding</a></li><li><a href="courses.html">→ Web Development</a></li><li><a href="courses.html">→ Aptitude Training</a></li></ul></div><div class="footer-col"><h4>Contact Us</h4><ul><li><a href="tel:9441602034">📞 9441602034</a></li><li><a href="tel:8341412034">📞 8341412034</a></li><li><a href="mailto:kruthivikascareers@gmail.com">✉️ Email Us</a></li></ul></div></div><div class="footer-bottom"><p>© 2024 Kruthi Vikas Careers. All rights reserved.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+
+<a href="https://wa.me/919441602034" id="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="scroll-top" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+<script>
+const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav'),mobileNavClose=document.getElementById('mobileNavClose');
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>60);});
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});
+mobileNavClose.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+const obs=new IntersectionObserver(e=>e.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

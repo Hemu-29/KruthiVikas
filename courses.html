@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | Kruthi Vikas Careers</title>
+  <meta name="description" content="Explore placement-ready courses at Kruthi Vikas Careers — Aptitude, Reasoning, Communication English, Coding, DSA, Python, Web Development, Real-Time Projects and more." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .courses-page-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:32px; }
+    .course-detail-card {
+      background:var(--white);
+      border-radius:var(--radius-lg);
+      overflow:hidden;
+      box-shadow:var(--shadow-sm);
+      border:1px solid var(--gray-200);
+      transition:var(--transition);
+    }
+    .course-detail-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); border-color:transparent; }
+    .cdc-header {
+      padding:36px;
+      background:linear-gradient(135deg,var(--navy-dark),var(--navy));
+      position:relative;
+      overflow:hidden;
+    }
+    .cdc-header::after {
+      content:'';
+      position:absolute;
+      width:160px;height:160px;
+      border-radius:50%;
+      background:rgba(245,184,0,0.07);
+      bottom:-60px;right:-40px;
+    }
+    .cdc-icon { width:72px;height:72px; border-radius:var(--radius-md); background:rgba(245,184,0,0.12); border:1px solid rgba(245,184,0,0.25); display:grid;place-items:center; font-size:2.2rem; margin-bottom:16px; position:relative; }
+    .cdc-header h2 { font-size:1.3rem;font-weight:800;color:var(--white);margin-bottom:8px; }
+    .cdc-header p  { font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.5; }
+    .cdc-badge { position:absolute;top:16px;right:16px; background:var(--gold);color:var(--navy-dark);font-size:0.7rem;font-weight:800;padding:4px 12px;border-radius:var(--radius-full); }
+    .cdc-body { padding:28px; }
+    .cdc-highlights { margin-bottom:20px; }
+    .cdc-highlights h3 { font-size:0.85rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px; }
+    .cdc-list { display:flex;flex-direction:column;gap:8px; }
+    .cdc-list li { display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--gray-700); }
+    .cdc-list li::before { content:'✓';color:var(--gold-dark);font-weight:800;flex-shrink:0; }
+    .cdc-info-row { display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0;padding:16px;background:var(--gray-100);border-radius:var(--radius-md); }
+    .cdc-info-item { text-align:center; }
+    .cdc-info-item .val { font-size:0.95rem;font-weight:800;color:var(--navy); }
+    .cdc-info-item .lbl { font-size:0.7rem;color:var(--gray-500);font-weight:500; }
+    .filter-bar { display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:48px;padding:20px;background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200); }
+    .filter-btn { padding:8px 20px;border-radius:var(--radius-full);border:1.5px solid var(--gray-200);font-size:0.85rem;font-weight:600;color:var(--gray-700);cursor:pointer;transition:var(--transition-fast);background:var(--white); }
+    .filter-btn:hover, .filter-btn.active { background:var(--navy);color:var(--white);border-color:var(--navy); }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span class="topbar-item"><i class="fa fa-phone"></i> <a href="tel:9441602034">9441602034</a></span>
+      <span class="topbar-item"><i class="fa fa-phone"></i> <a href="tel:8341412034">8341412034</a></span>
+      <span class="topbar-item"><i class="fa fa-envelope"></i> <a href="mailto:kruthivikascareers@gmail.com">kruthivikascareers@gmail.com</a></span>
+    </div>
+    <div class="topbar-right">
+      <span style="font-size:0.75rem;color:rgba(245,184,0,0.85);">⭐ Your Success Is Our Mission</span>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">KV</div>
+        <div class="logo-text">
+          <span class="name">KruthiVikas Careers</span>
+          <span class="tagline">Your Path to Career Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Enroll Now ✦</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="nav-logo"><div class="logo-icon" style="width:40px;height:40px;font-size:1.1rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span></div></a>
+    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html">🏠 Home</a><a href="courses.html">📚 Courses</a><a href="services.html">⚡ Services</a><a href="about.html">ℹ️ About Us</a><a href="trainers.html">👨‍🏫 Trainers</a><a href="contact.html">📞 Contact</a>
+  </div>
+  <div class="mobile-nav-footer"><div class="mobile-nav-cta"><a href="contact.html" class="btn btn-primary" style="justify-content:center;">Enroll Now ✦</a></div></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="section-tag" style="margin:0 auto 16px;">📚 Course Catalogue</div>
+      <h1>Placement-Ready <span>Courses</span></h1>
+      <p>Structured, expert-led programs designed to make you 100% job-ready from day one.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Courses</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES PAGE CONTENT -->
+<section style="padding:80px 0;background:var(--off-white);">
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar fade-up">
+      <span style="font-size:0.85rem;font-weight:700;color:var(--navy);white-space:nowrap;">Filter By:</span>
+      <button class="filter-btn active" onclick="filterCourses(this,'all')">All Courses</button>
+      <button class="filter-btn" onclick="filterCourses(this,'aptitude')">Aptitude & Communication</button>
+      <button class="filter-btn" onclick="filterCourses(this,'coding')">Coding & Tech</button>
+      <button class="filter-btn" onclick="filterCourses(this,'project')">Projects & Internship</button>
+      <button class="filter-btn" onclick="filterCourses(this,'placement')">Placement Prep</button>
+    </div>
+
+    <div class="courses-page-grid" id="coursesGrid">
+
+      <!-- Card 1 -->
+      <div class="course-detail-card fade-up" data-cat="aptitude">
+        <div class="cdc-header">
+          <div class="cdc-badge">🔥 Most Popular</div>
+          <div class="cdc-icon">🧠</div>
+          <h2>Aptitude & Reasoning</h2>
+          <p>Master quantitative aptitude, logical reasoning and verbal ability for any placement test or competitive exam.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">8 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">All Levels</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Quantitative Aptitude — Numbers, Time & Work, Speed</li>
+              <li>Logical Reasoning — Sequences, Puzzles, Coding-Decoding</li>
+              <li>Data Interpretation — Graphs, Tables, Charts</li>
+              <li>Verbal Ability — Grammar, Reading Comprehension</li>
+              <li>Company-wise mock tests (TCS, Infosys, Accenture, etc.)</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="course-detail-card fade-up fade-up-delay-1" data-cat="aptitude">
+        <div class="cdc-header">
+          <div class="cdc-icon">💬</div>
+          <h2>Communication English</h2>
+          <p>Build professional communication skills for HR interviews, group discussions, and corporate communication.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">6 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">All Levels</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Spoken English — Pronunciation, Fluency Building</li>
+              <li>Business Writing — Emails, Reports, Cover Letters</li>
+              <li>Group Discussion Techniques & Winning Strategies</li>
+              <li>HR Interview Questions — STAR Method Answers</li>
+              <li>Body Language & Professional Presentation Skills</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="course-detail-card fade-up fade-up-delay-2" data-cat="coding">
+        <div class="cdc-header">
+          <div class="cdc-badge">⭐ Best Seller</div>
+          <div class="cdc-icon">💻</div>
+          <h2>Coding & DSA</h2>
+          <p>Master Data Structures, Algorithms, and problem-solving to crack technical interviews at top companies.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">12 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Beginner+</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Arrays, Strings, Linked Lists, Stacks & Queues</li>
+              <li>Trees, Graphs, Heaps — Advanced Data Structures</li>
+              <li>Dynamic Programming & Greedy Algorithms</li>
+              <li>Sorting & Searching — All Key Algorithms</li>
+              <li>LeetCode & HackerRank Practice + Company Mock Tests</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-detail-card fade-up" data-cat="coding">
+        <div class="cdc-header">
+          <div class="cdc-icon">🐍</div>
+          <h2>Python Programming</h2>
+          <p>From basics to advanced Python — OOP, libraries, automation, and scripting for data and AI applications.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">10 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Beginner+</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Python Fundamentals — Variables, Loops, Functions</li>
+              <li>Object-Oriented Programming in Python</li>
+              <li>File Handling, Modules, Exception Management</li>
+              <li>NumPy, Pandas, Matplotlib Libraries</li>
+              <li>Mini-Projects: Web Scraper, Automation Scripts</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="course-detail-card fade-up fade-up-delay-1" data-cat="coding">
+        <div class="cdc-header">
+          <div class="cdc-icon">☕</div>
+          <h2>Java Programming</h2>
+          <p>Comprehensive Java course from core concepts to OOP, Collections, JDBC and enterprise-level programming.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">10 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Beginner+</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Core Java — Syntax, OOP, Interfaces, Generics</li>
+              <li>Collections Framework — List, Map, Set</li>
+              <li>Exception Handling & Multi-threading</li>
+              <li>JDBC for Database Connectivity</li>
+              <li>Introduction to Spring Boot Framework</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="course-detail-card fade-up fade-up-delay-2" data-cat="coding">
+        <div class="cdc-header">
+          <div class="cdc-icon">🌐</div>
+          <h2>Full Stack Web Development</h2>
+          <p>Build modern, responsive full-stack web applications from scratch using latest technologies.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">16 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Beginner+</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>HTML5, CSS3, Flexbox, Grid, Responsive Design</li>
+              <li>JavaScript ES6+, DOM Manipulation, APIs</li>
+              <li>React.js — Components, Hooks, State Management</li>
+              <li>Node.js & Express.js — Backend Development</li>
+              <li>MongoDB — Database Design & Integration</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="course-detail-card fade-up" data-cat="project">
+        <div class="cdc-header">
+          <div class="cdc-badge">🛠️ Hands-On</div>
+          <div class="cdc-icon">🔬</div>
+          <h2>Real-Time Industry Projects</h2>
+          <p>Work on live projects with mentors and build a powerful portfolio that impresses top recruiters.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">8 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Intermediate</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Learn</h3>
+            <ul class="cdc-list">
+              <li>Project Planning — Requirement Analysis, Wireframing</li>
+              <li>Agile Development with Sprints & Stand-ups</li>
+              <li>Version Control — Git & GitHub Collaboration</li>
+              <li>Build 3 Portfolio Projects end-to-end</li>
+              <li>Deployment to Cloud (AWS/Heroku/Netlify)</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="course-detail-card fade-up fade-up-delay-1" data-cat="project">
+        <div class="cdc-header">
+          <div class="cdc-icon">🏢</div>
+          <h2>Internship Program</h2>
+          <p>Structured internship opportunities with partner companies to gain real work experience and industry exposure.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">4–8 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Course Graduate</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Letter + Cert</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What You'll Experience</h3>
+            <ul class="cdc-list">
+              <li>Work on live company projects under senior mentors</li>
+              <li>Learn professional tools — Jira, Confluence, Slack</li>
+              <li>Internship Completion Letter for your resume</li>
+              <li>Performance-based Pre-Placement Offers (PPOs)</li>
+              <li>Weekly feedback and career mentoring sessions</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Apply for Internship <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="course-detail-card fade-up fade-up-delay-2" data-cat="placement">
+        <div class="cdc-header">
+          <div class="cdc-badge">🎯 Complete Package</div>
+          <div class="cdc-icon">🚀</div>
+          <h2>All-in-One Placement Package</h2>
+          <p>The ultimate all-in-one program — Aptitude + Communication + Coding + Projects + Placement Support.</p>
+        </div>
+        <div class="cdc-body">
+          <div class="cdc-info-row">
+            <div class="cdc-info-item"><div class="val">24 Weeks</div><div class="lbl">Duration</div></div>
+            <div class="cdc-info-item"><div class="val">Final Year</div><div class="lbl">Eligibility</div></div>
+            <div class="cdc-info-item"><div class="val">Certificate</div><div class="lbl">On Completion</div></div>
+          </div>
+          <div class="cdc-highlights">
+            <h3>What's Included</h3>
+            <ul class="cdc-list">
+              <li>Complete Aptitude & Reasoning Training</li>
+              <li>Communication & Soft Skills (English Fluency)</li>
+              <li>Coding + DSA with 200+ Practice Problems</li>
+              <li>2 Real-Time Portfolio Projects</li>
+              <li>Resume Crafting + Mock Interviews + Placement Drive Access</li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Enroll Now — Best Value <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Not Sure Which Course is Right for You?</h2>
+      <p>Book a free 30-minute career counselling session with our experts and get personalized guidance.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-navy">Book Free Counselling</a>
+        <a href="tel:9441602034" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">📞 Call: 9441602034</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="logo-icon" style="width:44px;height:44px;font-size:1.2rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline" style="color:var(--gold);">Your Path to Career Growth</span></div></a>
+        <p>Empowering students with placement-ready skills through expert training, real-time projects, and dedicated career guidance.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="courses.html">→ Courses</a></li><li><a href="services.html">→ Services</a></li><li><a href="contact.html">→ Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="courses.html">→ Aptitude & Reasoning</a></li><li><a href="courses.html">→ Communication English</a></li><li><a href="courses.html">→ Coding & DSA</a></li><li><a href="courses.html">→ Python & Java</a></li><li><a href="courses.html">→ Web Development</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul><li><a href="tel:9441602034">📞 9441602034</a></li><li><a href="tel:8341412034">📞 8341412034</a></li><li><a href="mailto:kruthivikascareers@gmail.com">✉️ Email Us</a></li><li><a href="contact.html">📍 Visit Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Kruthi Vikas Careers. All rights reserved.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919441602034" id="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="scroll-top" aria-label="Scroll to top" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+
+<script>
+/* Navbar */
+const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav'),mobileNavClose=document.getElementById('mobileNavClose');
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>60);});
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});
+mobileNavClose.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+
+/* Fade Observer */
+const obs=new IntersectionObserver(e=>e.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+/* Filter */
+function filterCourses(btn,cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.course-detail-card').forEach(card=>{
+    card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
+    if(card.style.display==='flex') card.style.flexDirection='column';
+  });
+}
+</script>
+</body>
+</html>

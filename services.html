@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Kruthi Vikas Careers</title>
+  <meta name="description" content="Kruthi Vikas Careers offers expert placement services — training, internships, career guidance, certification, mock interviews, and 100% placement support." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .service-detail-section { padding:80px 0; }
+    .service-detail-section:nth-child(even) { background:var(--off-white); }
+    .service-detail-section:nth-child(odd)  { background:var(--white); }
+    .service-detail-inner { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center; }
+    .service-detail-inner.reverse { direction:rtl; }
+    .service-detail-inner.reverse > * { direction:ltr; }
+    .service-img { width:100%;border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);object-fit:cover;aspect-ratio:4/3; }
+    .service-img-placeholder { width:100%;aspect-ratio:4/3;border-radius:var(--radius-xl);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:4rem;gap:12px; }
+    .service-img-placeholder p { font-size:1rem;font-weight:700; }
+    .service-feature-list { display:flex;flex-direction:column;gap:12px;margin:24px 0; }
+    .sf-item { display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-radius:var(--radius-md);background:var(--gray-100); }
+    .sf-icon { width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:1rem;flex-shrink:0; }
+    .sf-item h4 { font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:3px; }
+    .sf-item p  { font-size:0.8rem;color:var(--gray-500);line-height:1.4; }
+    @media(max-width:768px){.service-detail-inner{grid-template-columns:1fr;gap:40px;}.service-detail-inner.reverse{direction:ltr;}}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar"><div class="container"><div class="topbar-left"><span class="topbar-item"><i class="fa fa-phone"></i> <a href="tel:9441602034">9441602034</a></span><span class="topbar-item"><i class="fa fa-envelope"></i> <a href="mailto:kruthivikascareers@gmail.com">kruthivikascareers@gmail.com</a></span></div><div class="topbar-right"><span style="font-size:0.75rem;color:rgba(245,184,0,0.85);">⭐ Your Success Is Our Mission</span><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div></div></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline">Your Path to Career Growth</span></div></a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="trainers.html">Trainers</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-actions"><a href="contact.html" class="btn btn-primary btn-sm">Enroll Now ✦</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+  </div></div>
+</nav>
+<div class="mobile-nav" id="mobileNav"><div class="mobile-nav-header"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:40px;height:40px;font-size:1.1rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span></div></a><button class="mobile-nav-close" id="mobileNavClose">✕</button></div><div class="mobile-nav-links"><a href="index.html">🏠 Home</a><a href="courses.html">📚 Courses</a><a href="services.html">⚡ Services</a><a href="about.html">ℹ️ About Us</a><a href="trainers.html">👨‍🏫 Trainers</a><a href="contact.html">📞 Contact</a></div><div class="mobile-nav-footer"><div class="mobile-nav-cta"><a href="contact.html" class="btn btn-primary" style="justify-content:center;">Enroll Now ✦</a></div></div></div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container"><div class="page-header-inner">
+    <div class="section-tag" style="margin:0 auto 16px;">⚡ What We Offer</div>
+    <h1>Our <span>Services</span></h1>
+    <p>Comprehensive career development services — from training and projects to placement and guidance.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Services</span></div>
+  </div></div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section style="padding:80px 0;background:var(--off-white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Complete Solutions</div>
+      <h2 class="section-title">Everything You Need to <span class="highlight">Land Your Dream Job</span></h2>
+      <p class="section-subtitle">At Kruthi Vikas Careers, we offer a complete ecosystem of services that prepare students from day one to placement day.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up"><div class="service-icon-wrap" style="background:#EFF6FF;">🎓</div><h3>Skill Training</h3><p>Structured, up-to-date training programs in technical and soft skills, aligned with the latest industry demands and hiring patterns.</p><a href="#training" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+      <div class="service-card fade-up fade-up-delay-1"><div class="service-icon-wrap" style="background:#FFF8E1;">💼</div><h3>Internship Programs</h3><p>Structured internship opportunities with our 50+ partner companies to gain real industry exposure and experience.</p><a href="#internship" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+      <div class="service-card fade-up fade-up-delay-2"><div class="service-icon-wrap" style="background:#F0FFF4;">🤝</div><h3>Placement Assistance</h3><p>End-to-end placement support from aptitude test prep to offer letters — we guide every step of your job search.</p><a href="#placement" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+      <div class="service-card fade-up"><div class="service-icon-wrap" style="background:#FFF0F3;">🗣️</div><h3>Career Guidance</h3><p>One-on-one career counselling sessions to help you identify the right path, course, and company for your career aspirations.</p><a href="#guidance" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+      <div class="service-card fade-up fade-up-delay-1"><div class="service-icon-wrap" style="background:#F3F0FF;">📜</div><h3>Certification</h3><p>Industry-recognized certifications that validate your skills and significantly increase your value to hiring companies.</p><a href="index.html#certification" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+      <div class="service-card fade-up fade-up-delay-2"><div class="service-icon-wrap" style="background:#ECFDF5;">📝</div><h3>Mock Interviews & Tests</h3><p>Practice with realistic mock technical and HR interviews, aptitude tests, and group discussions to build interview confidence.</p><a href="#mock" class="service-link">Learn More <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE DETAIL: Training -->
+<section id="training" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="service-img-placeholder fade-up" style="background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:var(--white);">
+        <img src="assets/training_classroom.png" alt="Training" class="service-img" loading="lazy" />
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <div class="section-tag">01 — Training</div>
+        <h2 class="section-title" style="margin:16px 0;">Expert-Led <span class="highlight">Skill Training</span></h2>
+        <p class="section-subtitle" style="margin-bottom:24px;">Our training programs are designed to be practical, industry-relevant, and delivered by professionals who have real experience in the field.</p>
+        <div class="service-feature-list">
+          <div class="sf-item"><div class="sf-icon" style="background:#EFF6FF;">👨‍🏫</div><div><h4>Industry Expert Trainers</h4><p>All trainers have minimum 5+ years of industry experience</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF8E1;">📹</div><div><h4>Recorded Sessions</h4><p>All live classes are recorded for you to revisit anytime</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#F0FFF4;">📊</div><div><h4>Progress Tracking</h4><p>Weekly assessments and progress reports to keep you on track</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF0F3;">💬</div><div><h4>Doubt Clearing Sessions</h4><p>Dedicated weekly doubt sessions for personalized attention</p></div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Enroll in Training <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE DETAIL: Internship -->
+<section id="internship" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner reverse">
+      <div class="fade-up">
+        <div class="section-tag">02 — Internship</div>
+        <h2 class="section-title" style="margin:16px 0;">Real-World <span class="highlight">Internship Programs</span></h2>
+        <p class="section-subtitle" style="margin-bottom:24px;">Our internship programs connect you with real companies for hands-on experience that makes your resume stand out in competitive job markets.</p>
+        <div class="service-feature-list">
+          <div class="sf-item"><div class="sf-icon" style="background:#EFF6FF;">🏢</div><div><h4>50+ Partner Companies</h4><p>Access to internship opportunities across IT, software, and business sectors</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF8E1;">📄</div><div><h4>Official Internship Letter</h4><p>Internship completion letter and experience certificate for your resume</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#F0FFF4;">⭐</div><div><h4>Pre-Placement Offers</h4><p>Performance-based PPOs from internship companies available</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF0F3;">👩‍💼</div><div><h4>Senior Mentor Support</h4><p>Work under senior professionals with daily guidance and feedback</p></div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Apply for Internship <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <img src="assets/internship_work.png" alt="Internship Work" class="service-img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE DETAIL: Placement -->
+<section id="placement" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner">
+      <div class="fade-up">
+        <img src="assets/placement_success.png" alt="Placement Success" class="service-img" loading="lazy" />
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <div class="section-tag">03 — Placement</div>
+        <h2 class="section-title" style="margin:16px 0;">100% <span class="highlight">Placement Support</span></h2>
+        <p class="section-subtitle" style="margin-bottom:24px;">Our dedicated placement cell works tirelessly to connect you with the right opportunities and prepare you thoroughly for every stage of the hiring process.</p>
+        <div class="service-feature-list">
+          <div class="sf-item"><div class="sf-icon" style="background:#EFF6FF;">📋</div><div><h4>Resume Building</h4><p>ATS-optimized resume crafting by HR professionals</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF8E1;">🎤</div><div><h4>Mock Interviews</h4><p>Technical + HR mock interviews with detailed feedback</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#F0FFF4;">🌐</div><div><h4>Company Referrals</h4><p>Direct referrals to 50+ hiring partner companies</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF0F3;">📢</div><div><h4>Placement Drives</h4><p>Regular on-campus placement drives with multiple companies</p></div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get Placement Support <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE DETAIL: Career Guidance -->
+<section id="guidance" class="service-detail-section">
+  <div class="container">
+    <div class="service-detail-inner reverse">
+      <div class="fade-up">
+        <div class="section-tag">04 — Career Guidance</div>
+        <h2 class="section-title" style="margin:16px 0;">Personalized <span class="highlight">Career Guidance</span></h2>
+        <p class="section-subtitle" style="margin-bottom:24px;">Not sure which path to take? Our career counsellors provide personalized one-on-one sessions to map your ideal career journey.</p>
+        <div class="service-feature-list">
+          <div class="sf-item"><div class="sf-icon" style="background:#EFF6FF;">🎯</div><div><h4>Career Roadmap</h4><p>Customized career roadmap based on your skills and goals</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF8E1;">🧭</div><div><h4>Course Selection</h4><p>Expert guidance on choosing the right course and learning path</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#F0FFF4;">📊</div><div><h4>Industry Insights</h4><p>Up-to-date information on job market trends and in-demand skills</p></div></div>
+          <div class="sf-item"><div class="sf-icon" style="background:#FFF0F3;">🤝</div><div><h4>Ongoing Mentorship</h4><p>Continued mentoring support even after course completion</p></div></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Book Free Session <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <img src="assets/career_guidance.png" alt="Career Guidance" class="service-img" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="container"><div class="cta-inner">
+    <h2>Start Your Career Transformation Today</h2>
+    <p>Skills Today • Success Tomorrow • Future Forever</p>
+    <div class="cta-buttons"><a href="contact.html" class="btn btn-navy">Get Started Now</a><a href="courses.html" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">View Courses</a></div>
+    <div class="cta-phone"><span>Or call us directly</span><a href="tel:9441602034" class="phone-num">📞 9441602034, 8341412034</a></div>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer><div class="container"><div class="footer-main"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:44px;height:44px;font-size:1.2rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline" style="color:var(--gold);">Your Path to Career Growth</span></div></a><p>Empowering students with placement-ready skills through expert training and career guidance.</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="courses.html">→ Courses</a></li><li><a href="contact.html">→ Contact</a></li></ul></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">→ Skill Training</a></li><li><a href="services.html">→ Internship Programs</a></li><li><a href="services.html">→ Placement Support</a></li><li><a href="services.html">→ Career Guidance</a></li></ul></div><div class="footer-col"><h4>Contact Us</h4><ul><li><a href="tel:9441602034">📞 9441602034</a></li><li><a href="tel:8341412034">📞 8341412034</a></li><li><a href="mailto:kruthivikascareers@gmail.com">✉️ Email Us</a></li></ul></div></div><div class="footer-bottom"><p>© 2024 Kruthi Vikas Careers. All rights reserved.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+
+<a href="https://wa.me/919441602034" id="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="scroll-top" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+<script>
+const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav'),mobileNavClose=document.getElementById('mobileNavClose');
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>60);});
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});
+mobileNavClose.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+const obs=new IntersectionObserver(e=>e.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

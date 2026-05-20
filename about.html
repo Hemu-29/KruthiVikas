@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Kruthi Vikas Careers</title>
+  <meta name="description" content="Learn about Kruthi Vikas Careers — our mission to empower students with placement-ready skills, our story, values, and the team behind our success." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .about-hero { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0; }
+    .about-img-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px;height:480px; }
+    .about-img-grid img { width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg); }
+    .about-img-grid img:first-child { grid-row:span 2;border-radius:var(--radius-xl); }
+    .values-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;margin-top:60px; }
+    .value-card { padding:36px 28px;border-radius:var(--radius-lg);background:var(--white);border:1px solid var(--gray-200);text-align:center;transition:var(--transition); }
+    .value-card:hover { transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--gold); }
+    .value-icon { width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-size:2rem;margin:0 auto 20px; }
+    .value-card h3 { font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:10px; }
+    .value-card p { font-size:0.85rem;color:var(--gray-500);line-height:1.65; }
+    .mission-vision { display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px; }
+    .mv-card { padding:40px;border-radius:var(--radius-xl);position:relative;overflow:hidden; }
+    .mv-card::before { content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,0.08); }
+    .mv-card.mission { background:linear-gradient(135deg,var(--navy-dark),var(--navy)); }
+    .mv-card.vision  { background:linear-gradient(135deg,var(--gold-dark),var(--gold)); }
+    .mv-icon { font-size:2.5rem;margin-bottom:16px; }
+    .mv-card.mission h3 { color:var(--gold); }
+    .mv-card.vision h3  { color:var(--navy); }
+    .mv-card.mission p  { color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75; }
+    .mv-card.vision p   { color:var(--navy);opacity:0.85;font-size:0.95rem;line-height:1.75; }
+    .team-section { padding:100px 0;background:var(--off-white); }
+    .milestones { display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px; }
+    .milestone-card { background:var(--white);border-radius:var(--radius-lg);padding:32px 24px;text-align:center;border:1px solid var(--gray-200);transition:var(--transition); }
+    .milestone-card:hover { box-shadow:var(--shadow-md);border-color:var(--gold); }
+    .milestone-year { font-size:0.8rem;font-weight:700;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px; }
+    .milestone-num  { font-size:2.5rem;font-weight:900;color:var(--navy);line-height:1; }
+    .milestone-desc { font-size:0.82rem;color:var(--gray-500);margin-top:8px;line-height:1.5; }
+    @media(max-width:768px){.about-hero{grid-template-columns:1fr;gap:40px;}.about-img-grid{height:320px;}.mission-vision{grid-template-columns:1fr;}.milestones{grid-template-columns:repeat(2,1fr);}}.about-img-grid img:first-child{border-radius:var(--radius-lg);}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span class="topbar-item"><i class="fa fa-phone"></i> <a href="tel:9441602034">9441602034</a></span>
+      <span class="topbar-item"><i class="fa fa-envelope"></i> <a href="mailto:kruthivikascareers@gmail.com">kruthivikascareers@gmail.com</a></span>
+    </div>
+    <div class="topbar-right">
+      <span style="font-size:0.75rem;color:rgba(245,184,0,0.85);">⭐ Your Success Is Our Mission</span>
+      <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="logo-icon">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline">Your Path to Career Growth</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions"><a href="contact.html" class="btn btn-primary btn-sm">Enroll Now ✦</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:40px;height:40px;font-size:1.1rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span></div></a><button class="mobile-nav-close" id="mobileNavClose">✕</button></div>
+  <div class="mobile-nav-links"><a href="index.html">🏠 Home</a><a href="courses.html">📚 Courses</a><a href="services.html">⚡ Services</a><a href="about.html">ℹ️ About Us</a><a href="trainers.html">👨‍🏫 Trainers</a><a href="contact.html">📞 Contact</a></div>
+  <div class="mobile-nav-footer"><div class="mobile-nav-cta"><a href="contact.html" class="btn btn-primary" style="justify-content:center;">Enroll Now ✦</a></div></div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="section-tag" style="margin:0 auto 16px;">ℹ️ Our Story</div>
+      <h1>About <span>Kruthi Vikas Careers</span></h1>
+      <p>From a small coaching initiative to a full-fledged placement-ready training institution — here's our story.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>About Us</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT HERO -->
+<section style="background:var(--white);">
+  <div class="container">
+    <div class="about-hero">
+      <!-- Left Images -->
+      <div class="about-img-grid fade-up">
+        <img src="assets/training_classroom.png" alt="Training at Kruthi Vikas" loading="lazy" />
+        <img src="assets/placement_success.png" alt="Placement Success" loading="lazy" />
+        <img src="assets/certification_award.png" alt="Certification Award" loading="lazy" />
+      </div>
+      <!-- Right Content -->
+      <div class="fade-up fade-up-delay-1">
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title" style="margin:16px 0;">We Build Careers, Not Just Skills</h2>
+        <p class="section-subtitle" style="margin-bottom:24px;">Kruthi Vikas Careers was founded with a single vision: to bridge the gap between academic learning and industry requirements. We believe every student deserves the opportunity to be truly placement-ready.</p>
+        <p style="font-size:0.92rem;color:var(--gray-500);line-height:1.75;margin-bottom:28px;">Our training methodology combines structured aptitude preparation, hands-on coding practice, real-time project experience, and professional soft skills — all delivered by experienced industry professionals who have walked the path our students aspire to.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+          <div style="padding:20px;background:var(--gray-100);border-radius:var(--radius-md);text-align:center;">
+            <div style="font-size:2rem;font-weight:900;color:var(--navy);">500+</div>
+            <div style="font-size:0.8rem;color:var(--gray-500);font-weight:600;">Students Placed</div>
+          </div>
+          <div style="padding:20px;background:var(--gray-100);border-radius:var(--radius-md);text-align:center;">
+            <div style="font-size:2rem;font-weight:900;color:var(--navy);">5+</div>
+            <div style="font-size:0.8rem;color:var(--gray-500);font-weight:600;">Years of Excellence</div>
+          </div>
+          <div style="padding:20px;background:var(--gray-100);border-radius:var(--radius-md);text-align:center;">
+            <div style="font-size:2rem;font-weight:900;color:var(--navy);">50+</div>
+            <div style="font-size:0.8rem;color:var(--gray-500);font-weight:600;">Hiring Partners</div>
+          </div>
+          <div style="padding:20px;background:var(--gray-100);border-radius:var(--radius-md);text-align:center;">
+            <div style="font-size:2rem;font-weight:900;color:var(--navy);">10+</div>
+            <div style="font-size:0.8rem;color:var(--gray-500);font-weight:600;">Courses Offered</div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Book Free Counselling <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section style="padding:80px 0;background:var(--off-white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Our Purpose</div>
+      <h2 class="section-title">Mission, Vision & <span class="highlight">Values</span></h2>
+    </div>
+    <div class="mission-vision">
+      <div class="mv-card mission fade-up">
+        <div class="mv-icon">🎯</div>
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;">Our Mission</h3>
+        <p>To empower every student with the skills, knowledge, and confidence needed to succeed in their dream career. We are committed to providing world-class training that is practical, affordable, and outcome-focused — ensuring every graduate is placement-ready and industry-fit.</p>
+      </div>
+      <div class="mv-card vision fade-up fade-up-delay-1">
+        <div class="mv-icon">🌟</div>
+        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;">Our Vision</h3>
+        <p>To be the most trusted and impactful career training institution in India — a place where students from every background can access quality education, expert mentorship, and real opportunities that transform their lives and shape the future workforce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="padding:80px 0;background:var(--white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Our Core Values</div>
+      <h2 class="section-title">The Principles that <span class="highlight">Drive Us</span></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up">
+        <div class="value-icon" style="background:#EFF6FF;">💡</div>
+        <h3>Innovation</h3>
+        <p>We continuously update our curriculum to stay ahead of industry trends and ensure students learn what's in demand.</p>
+      </div>
+      <div class="value-card fade-up fade-up-delay-1">
+        <div class="value-icon" style="background:#FFF8E1;">⭐</div>
+        <h3>Excellence</h3>
+        <p>We hold ourselves to the highest standards in training quality, trainer expertise, and student outcomes.</p>
+      </div>
+      <div class="value-card fade-up fade-up-delay-2">
+        <div class="value-icon" style="background:#F0FFF4;">🤝</div>
+        <h3>Student-First</h3>
+        <p>Every decision we make is centered around the growth, success, and well-being of our students.</p>
+      </div>
+      <div class="value-card fade-up">
+        <div class="value-icon" style="background:#FFF0F3;">❤️</div>
+        <h3>Integrity</h3>
+        <p>We are honest, transparent, and ethical in everything we do — with students, partners, and our community.</p>
+      </div>
+      <div class="value-card fade-up fade-up-delay-1">
+        <div class="value-icon" style="background:#F3F0FF;">🏆</div>
+        <h3>Results-Driven</h3>
+        <p>Our success is measured by the placements and achievements of our students — not just course completions.</p>
+      </div>
+      <div class="value-card fade-up fade-up-delay-2">
+        <div class="value-icon" style="background:#ECFDF5;">🌱</div>
+        <h3>Continuous Growth</h3>
+        <p>We encourage a growth mindset in students and trainers alike — learning never stops at Kruthi Vikas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section style="padding:80px 0;background:var(--navy);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag" style="background:rgba(245,184,0,0.15);border-color:rgba(245,184,0,0.3);color:var(--gold);">Our Journey</div>
+      <h2 class="section-title" style="color:var(--white);">Milestones That Define <span class="highlight">Our Growth</span></h2>
+    </div>
+    <div class="milestones">
+      <div class="milestone-card fade-up">
+        <div class="milestone-year">Founded</div>
+        <div class="milestone-num">2019</div>
+        <div class="milestone-desc">Kruthi Vikas Careers was founded with a vision to empower students</div>
+      </div>
+      <div class="milestone-card fade-up fade-up-delay-1">
+        <div class="milestone-year">First Batch</div>
+        <div class="milestone-num">50+</div>
+        <div class="milestone-desc">Students in our first placement training batch, 100% placed</div>
+      </div>
+      <div class="milestone-card fade-up fade-up-delay-2">
+        <div class="milestone-year">Partnerships</div>
+        <div class="milestone-num">50+</div>
+        <div class="milestone-desc">Hiring partners joined our placement network across India</div>
+      </div>
+      <div class="milestone-card fade-up fade-up-delay-3">
+        <div class="milestone-year">Today</div>
+        <div class="milestone-num">500+</div>
+        <div class="milestone-desc">Successful placements and growing stronger every batch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Join the Kruthi Vikas Family</h2>
+      <p>Be part of a community that has produced 500+ successful professionals. Your journey starts here.</p>
+      <div class="cta-buttons"><a href="contact.html" class="btn btn-navy">Enroll Now</a><a href="courses.html" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">View Courses</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-icon" style="width:44px;height:44px;font-size:1.2rem;">KV</div><div class="logo-text"><span class="name">KruthiVikas Careers</span><span class="tagline" style="color:var(--gold);">Your Path to Career Growth</span></div></a><p>Empowering students with placement-ready skills through expert training, real-time projects, and dedicated career guidance.</p><div class="footer-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">→ Home</a></li><li><a href="about.html">→ About Us</a></li><li><a href="courses.html">→ Courses</a></li><li><a href="services.html">→ Services</a></li><li><a href="contact.html">→ Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="courses.html">→ Aptitude & Reasoning</a></li><li><a href="courses.html">→ Communication English</a></li><li><a href="courses.html">→ Coding & DSA</a></li><li><a href="courses.html">→ Web Development</a></li></ul></div>
+      <div class="footer-col"><h4>Contact Us</h4><ul><li><a href="tel:9441602034">📞 9441602034</a></li><li><a href="tel:8341412034">📞 8341412034</a></li><li><a href="mailto:kruthivikascareers@gmail.com">✉️ Email Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Kruthi Vikas Careers. All rights reserved.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919441602034" id="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="scroll-top" onclick="scrollToTop()"><i class="fa fa-arrow-up"></i></button>
+
+<script>
+const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav'),mobileNavClose=document.getElementById('mobileNavClose');
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60);document.getElementById('scroll-top').classList.toggle('visible',window.scrollY>60);});
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileNav.classList.toggle('open');document.body.style.overflow=mobileNav.classList.contains('open')?'hidden':'';});
+mobileNavClose.addEventListener('click',()=>{hamburger.classList.remove('open');mobileNav.classList.remove('open');document.body.style.overflow='';});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+const obs=new IntersectionObserver(e=>e.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
